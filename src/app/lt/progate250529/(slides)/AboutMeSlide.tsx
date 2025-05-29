@@ -2,13 +2,11 @@ import { BoldBodyText, Column, CustomText, Row, SlideBase, Spacer, SubTitleText,
 import Image from "next/image"
 import Icon from "@/assets/hasuro_icon.png"
 import TechStackImage from "@/assets/tech_stack.png"
-import { zenMaruGothic } from "../page"
 
 export const AboutMeSlide = () => {
   return (
     <SlideBase
       backgroundColor="#ffffff"
-      fontFamily={zenMaruGothic.style.fontFamily}
     >
       <Row
         align="center"

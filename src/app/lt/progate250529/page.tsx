@@ -15,8 +15,9 @@ import { BrandingSlide } from "./(slides)/BrandingSlide"
 import { HowSwitchingSlide } from "./(slides)/SwitchingSlide"
 import { HowToChallengeSlide } from "./(slides)/HowToChallengeSlide"
 
-export const zenMaruGothic = Zen_Maru_Gothic({
+const zenMaruGothic = Zen_Maru_Gothic({
   weight: "500",
+  preload: false,
 })
 
 export default function Progate250529Page() {
