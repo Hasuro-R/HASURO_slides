@@ -41,10 +41,9 @@ export default function Progate250529Page() {
   return (
     <SlideCore
       slides={slides}
-      isShowSlideButtonAlways
       baseSlideFrameStyle={{
-        textColor: "#404855",
-        backgroundColor: "#ffffff",
+        textColor: "var(--text-color-dark)",
+        backgroundColor: "var(--color-white)",
         fontFamily: zenMaruGothic.style.fontFamily,
       }}
     />
