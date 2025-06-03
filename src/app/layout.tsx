@@ -5,16 +5,41 @@ import "./globals.css"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 })
 
+const siteName = "HASURO's slides"
+const description = "HASUROのスライド集です。"
+const url = "https://slides.hasuro.com"
+
 export const metadata: Metadata = {
-  title: "HASURO's slides",
-  description: "HASUROのスライド集です",
+  title: siteName,
+  description,
+  openGraph: {
+    title: {
+      default: siteName,
+      template: "%s",
+    },
+    description,
+    url,
+    siteName,
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: {
+      default: siteName,
+      template: "%s",
+    },
+    description,
+    site: "@HASURO_dev",
+    creator: "@HASURO_dev",
+  },
 }
 
 export default function RootLayout({
