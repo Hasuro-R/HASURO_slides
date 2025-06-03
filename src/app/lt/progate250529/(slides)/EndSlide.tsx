@@ -4,9 +4,12 @@ import { useEffect, useState } from "react"
 import { Column, Container, Image, SlideBase, TitleText } from "react-slide-craft"
 import { ThanksAnimation } from "@/components/animation/ThanksAnimation"
 import QRImage from "@/assets/hasuro_qr.png"
+import { useColors } from "@/hooks/useColors"
 
 export const EndSlide = () => {
-  const [isQR, setIsQR] = useState(false);
+  const [isQR, setIsQR] = useState(false)
+
+  const colors = useColors()
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,7 +20,7 @@ export const EndSlide = () => {
   }, [])
 
   return (
-    <SlideBase textColor="var(--text-color-light)" backgroundColor="var(--bg-color-dark">
+    <SlideBase textColor={colors("light", "text")} backgroundColor={colors("dark", "bg")}>
       <Column align="center" crossAlign="center" gap="3xl">
         <Container
           width="auto"
@@ -25,7 +28,7 @@ export const EndSlide = () => {
           cornerRadius={1000}
           border={{
             width: 4,
-            color: "#ffffff",
+            color: colors("white"),
             style: "solid",
           }}
           containerStyle={{ aspectRatio: "1/1" }}
