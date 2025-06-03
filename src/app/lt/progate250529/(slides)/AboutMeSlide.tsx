@@ -1,12 +1,26 @@
-import { BoldBodyText, Column, CustomText, Row, SlideBase, Spacer, SubTitleText, TitleText, Image as SlideImage, Container } from "react-slide-craft"
+import { BoldBodyText, Column, CustomText, Row, SlideBase, Spacer, SubTitleText, TitleText, Image as SlideImage, Container, List, ListProps } from "react-slide-craft"
 import Image from "next/image"
 import Icon from "@/assets/hasuro_icon.png"
 import TechStackImage from "@/assets/tech_stack.png"
+import { useColors } from "@/hooks/useColors"
 
 export const AboutMeSlide = () => {
+  const colors = useColors()
+
+  const listStyle: ListProps = {
+    items: [],
+    gap: "8",
+    marker: "none",
+    textStyle: {
+      color: colors("pale", "text"),
+      size: "xl",
+      weight: "600",
+    },
+  }
+
   return (
     <SlideBase
-      backgroundColor="#ffffff"
+      backgroundColor={colors("light", "bg")}
     >
       <Row
         align="center"
@@ -16,8 +30,8 @@ export const AboutMeSlide = () => {
           width="30%"
           align="center"
           crossAlign="center"
-          textColor="#ffffff"
-          backgroundColor="#404855"
+          textColor={colors("light", "text")}
+          backgroundColor={colors("dark", "bg")}
         >
           <Container
             width="75%"
@@ -25,7 +39,7 @@ export const AboutMeSlide = () => {
             cornerRadius={1000}
             border={{
               width: 4,
-              color: "#ffffff",
+              color: colors("white"),
               style: "solid",
             }}
             containerStyle={{ aspectRatio: "1/1" }}
@@ -34,13 +48,13 @@ export const AboutMeSlide = () => {
           </Container>
           <Spacer height="25" />
           <TitleText text="HASURO" />
-          <CustomText text="はすろー" weight="600" color="#788c92" />
+          <CustomText text="はすろー" weight="600" color={colors("pale-gray")} />
         </Column>
         <Column
           width="70%"
           crossAlign="center"
           padding="3xl"
-          textColor="#404855"
+          textColor={colors("dark", "text")}
         >
           <Row
             height="auto"
@@ -54,17 +68,27 @@ export const AboutMeSlide = () => {
           <Column
             height="auto"
             gap="8"
-            textColor="#788c92"
+            textColor={colors("pale", "text")}
           >
-            <BoldBodyText text="19歳の自由人" />
-            <BoldBodyText text="【趣味】" />
-            <BoldBodyText text="・🐟を市場で仕入れてさばく、お菓子🍰作り" />
-            <BoldBodyText text="・スキューバダイビング🤿" />
-            <BoldBodyText text="・アプリ開発" />
+            <List
+              {...listStyle}
+              items={[
+                "19歳の自由人",
+                "【趣味】",
+                "・🐟を市場で仕入れてさばく、お菓子🍰作り",
+                "・スキューバダイビング🤿",
+                "・アプリ開発",
+              ]}
+            />
             <Spacer height="10" />
-            <BoldBodyText text="【最近のエピソード】" />
-            <BoldBodyText text="・タコパがしたいお年頃" />
-            <BoldBodyText text="・|React Slide Craft|というReactのライブラリをリリース" highlightColor="#404855" />
+            <List
+              {...listStyle}
+              items={[
+                "【最近のエピソード】",
+                "・タコパがしたいお年頃",
+                "・|React Slide Craft|というReactのライブラリをリリース",
+              ]}
+            />
             <Spacer height="10" />
             <BoldBodyText text="【技術スタック】" />
             <Row>

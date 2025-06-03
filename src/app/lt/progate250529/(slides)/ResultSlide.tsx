@@ -1,15 +1,18 @@
 "use client"
 
 import { SlideSquareDecoration } from "@/components/slide/decoration/SlideSquareDecoration"
+import { useColors } from "@/hooks/useColors"
 import { Column, CustomText, FloatContainer, SectionTitleText, SlideBase, Spacer, TitleText } from "react-slide-craft"
 
 export const ResultSlideBase = ({ children } : { children?: React.ReactNode }) => {
+  const colors = useColors()
+
   return (
     <SlideBase>
       <Column align="center" crossAlign="center">
         <Column width="auto" height="auto" gap="base">
           <SectionTitleText text="結論：" />
-          <CustomText size="5xl" weight="700" text="インターンは|行動力|で始まる" highlightColor="var(--color-pink)" highlightFontSize="*1.05" />
+          <CustomText size="5xl" weight="700" text="インターンは|行動力|で始まる" highlightColor={colors("pink")} highlightFontSize="*1.05" />
         </Column>
         <Spacer height="3xl" />
       </Column>

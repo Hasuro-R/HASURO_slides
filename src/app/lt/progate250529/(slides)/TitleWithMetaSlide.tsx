@@ -1,10 +1,13 @@
 "use client"
 
+import { useColors } from "@/hooks/useColors"
 import { BodyText, Column, FloatContainer, HeadlineText, SlideBase, Spacer, SubTitleText } from "react-slide-craft"
 
 const TitleWithMetaSlideBase = ({ children } : { children: React.ReactNode }) => {
+  const colors = useColors()
+
   return (
-    <SlideBase textColor="var(--text-color-light)" backgroundColor="var(--bg-color-dark)">
+    <SlideBase textColor={colors("light", "text")} backgroundColor={colors("dark", "bg")}>
       {children}
       <Spacer height="2xl" />
     </SlideBase>
