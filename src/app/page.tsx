@@ -1,4 +1,15 @@
+"use client"
+
+import { useRouter } from "next/navigation"
+import { useEffect } from "react"
+
 export default function Home() {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push("/me")
+  }, [])
+
   return (
     <></>
     // <div className="w-full flex flex-col items-center justify-start">

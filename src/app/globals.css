@@ -12,6 +12,7 @@
   --text-color-pale: var(--color-pale-gray);
 
   --bg-color-dark: var(--color-dark);
+  --bg-color-light: var(--color-white);
 }
 
 body {
