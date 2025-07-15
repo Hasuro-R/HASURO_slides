@@ -24,7 +24,7 @@ export default function MePage() {
   return (
     <SlideCore
       slides={slides}
-      baseSlideFrameStyle={{
+      baseSlideStyle={{
         textColor: colors("dark", "text"),
         backgroundColor: colors("light", "bg"),
         fontFamily: zenMaruGothic.style.fontFamily,
