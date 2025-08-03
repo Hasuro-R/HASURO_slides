@@ -1,48 +1,40 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column } from "react-slide-craft"
+import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, Row, CustomText, TitleAndBodySlideTemplate } from "react-slide-craft"
 
 export function ConceptSlide() {
   return (
-    <SlideBase>
-      <Container>
-        <Column align="center" crossAlign="center">
-        <Spacer height="2xl" />
-        <TitleText text="KUYOUのコンセプト" />
+    <TitleAndBodySlideTemplate title="KUYOUのコンセプト">
+      <Column align="center" crossAlign="center">
+      <Spacer height="2xl" />
+      <Column align="center" crossAlign="center">
+        <BoldBodyText text="黒歴史をリバイバルさせて、みんなで供養し、成仏させる" />
         
-        <Spacer height="2xl" />
+        <Spacer height="lg" />
         
-        <div style={{ textAlign: "center" }}>
-          <BoldBodyText text="黒歴史をリバイバルさせて、みんなで供養し、成仏させる" />
+        <Row gap="60px" align="center" crossAlign="center" height="auto">
+          <Column align="center" height="auto" width="auto">
+            <CustomText text="😔" size="3rem" />
+            <Spacer height="sm" />
+            <CustomText text="黒歴史を\n匿名投稿" size="1.4rem" />
+          </Column>
           
-          <Spacer height="lg" />
+          <CustomText text="→" size="3rem" />
           
-          <div style={{ 
-            display: "flex",
-            justifyContent: "center",
-            gap: "60px",
-            fontSize: "1.4rem"
-          }}>
-            <div>
-              <div style={{fontSize: "3rem", marginBottom: "20px"}}>😔</div>
-              <div>黒歴史を<br />匿名投稿</div>
-            </div>
-            
-            <div style={{fontSize: "3rem", alignSelf: "center"}}>→</div>
-            
-            <div>
-              <div style={{fontSize: "3rem", marginBottom: "20px"}}>🙏</div>
-              <div>みんなで<br />供養・アドバイス</div>
-            </div>
-            
-            <div style={{fontSize: "3rem", alignSelf: "center"}}>→</div>
-            
-            <div>
-              <div style={{fontSize: "3rem", marginBottom: "20px"}}>✨</div>
-              <div>成仏して<br />成長につなげる</div>
-            </div>
-          </div>
-        </div>
-        </Column>
-      </Container>
-    </SlideBase>
+          <Column align="center" height="auto" width="auto">
+            <CustomText text="🙏" size="3rem" />
+            <Spacer height="sm" />
+            <CustomText text="みんなで\n供養・アドバイス" size="1.4rem" />
+          </Column>
+          
+          <CustomText text="→" size="3rem" />
+          
+          <Column align="center" height="auto" width="auto">
+            <CustomText text="✨" size="3rem" />
+            <Spacer height="sm" />
+            <CustomText text="成仏して\n成長につなげる" size="1.4rem" />
+          </Column>
+        </Row>
+      </Column>
+      </Column>
+    </TitleAndBodySlideTemplate>
   )
 }

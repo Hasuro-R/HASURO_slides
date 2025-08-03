@@ -1,10 +1,9 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, List, Column } from "react-slide-craft"
+import { SlideBase, TitleText, BoldBodyText, Container, Spacer, List, Column, Row, FloatContainer, CustomText } from "react-slide-craft"
 
 export function FeaturesSlide3() {
   return (
     <SlideBase>
-      <Container>
-        <Column align="center" crossAlign="center">
+        <Column align="center" crossAlign="center" height="auto">
         <Spacer height="xl" />
         
         <TitleText text="💡 智慧の泉" />
@@ -15,13 +14,8 @@ export function FeaturesSlide3() {
         
         <Spacer height="lg" />
         
-        <div style={{ 
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          gap: "80px"
-        }}>
-          <div style={{ flex: 1 }}>
+        <Row gap="80px" width="auto">
+          <Column>
             <List
               items={[
                 "💭 改善案・アドバイス投稿",
@@ -31,53 +25,44 @@ export function FeaturesSlide3() {
               ]}
             />
             
-            <Spacer height="lg" />
+            <Spacer height="2xl" />
             
-            <div style={{
-              backgroundColor: "#f0fdf4",
-              padding: "20px",
-              borderRadius: "10px",
-              border: "2px solid #86efac"
-            }}>
+            <Container
+              height="auto"
+              backgroundColor="#f0fdf4"
+              padding="20px"
+              cornerRadius={10}
+              border={{width: 2, style: "solid", color: "#86efac"}}
+            >
               <BoldBodyText text="「失敗」を「学び」に変える知恵を共有" />
-            </div>
-          </div>
+            </Container>
+          </Column>
           
-          <div style={{ 
-            flex: 1,
-            textAlign: "center"
-          }}>
-            <div style={{
-              backgroundColor: "#dcfce7",
-              padding: "30px",
-              borderRadius: "15px",
-              marginBottom: "20px"
-            }}>
-              <div style={{fontSize: "3rem", marginBottom: "15px"}}>💡</div>
-              <div style={{
-                fontSize: "1.2rem",
-                fontWeight: "600",
-                lineHeight: "1.6"
-              }}>
-                「その時はこう言えば<br />
-                良かったかも」<br />
-                <br />
-                「次回は〇〇を<br />
-                試してみては？」
-              </div>
-            </div>
+          <Column align="center">
+            <Container
+              backgroundColor="#dcfce7"
+              padding="30px"
+              cornerRadius={15}
+            >
+              <Column align="center" height="auto">
+                <CustomText text="💡" size="3rem" />
+                <Spacer height="sm" />
+                <CustomText 
+                  text="「その時はこう言えば\n良かったかも」\n\n「次回は〇〇を\n試してみては？」" 
+                  size="1.2rem" 
+                />
+              </Column>
+            </Container>
             
-            <div style={{
-              fontSize: "1.1rem",
-              fontStyle: "italic"
-            }}>
-              批判ではなく、<br />
-              前向きなアドバイス
-            </div>
-          </div>
-        </div>
+            <Spacer height="sm" />
+            
+            <CustomText 
+              text="批判ではなく、\n前向きなアドバイス" 
+              size="1.1rem" 
+            />
+          </Column>
+        </Row>
         </Column>
-      </Container>
     </SlideBase>
   )
 }
