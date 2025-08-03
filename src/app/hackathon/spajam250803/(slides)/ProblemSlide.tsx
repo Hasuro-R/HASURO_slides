@@ -1,4 +1,4 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, CustomText, TitleAndBodySlideTemplate } from "react-slide-craft"
+import { BoldBodyText, Spacer, Column, CustomText, TitleAndBodySlideTemplate } from "react-slide-craft"
 
 export function ProblemSlide() {
   return (

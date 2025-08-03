@@ -1,4 +1,4 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, CustomText, FloatContainer } from "react-slide-craft"
+import { SlideBase, TitleText, Spacer, Column } from "react-slide-craft"
 
 export function DemoSlide() {
   return (
