@@ -1,6 +1,6 @@
 "use client"
 
-import { genSlideObject, SlideCore } from "react-slide-craft"
+import { SlideCore } from "react-slide-craft"
 import { useColors } from "@/hooks/useColors"
 import { Zen_Maru_Gothic } from "next/font/google"
 

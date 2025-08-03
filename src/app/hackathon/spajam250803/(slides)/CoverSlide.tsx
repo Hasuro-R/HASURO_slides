@@ -1,4 +1,4 @@
-import { SlideBase, TitleText, SubTitleText, Container, Spacer, Column, CustomText } from "react-slide-craft"
+import { SlideBase, TitleText, SubTitleText, Spacer, Column, CustomText } from "react-slide-craft"
 
 export function CoverSlide() {
   return (

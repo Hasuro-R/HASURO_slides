@@ -1,4 +1,4 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, FloatContainer, CustomText } from "react-slide-craft"
+import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, CustomText } from "react-slide-craft"
 
 export function TeamSlide() {
   return (
