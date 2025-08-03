@@ -1,67 +1,60 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, List, Column } from "react-slide-craft"
+import { SlideBase, TitleText, BoldBodyText, Container, Spacer, List, Column, Row, FloatContainer, CustomText } from "react-slide-craft"
 
 export function FeaturesSlide1() {
   return (
     <SlideBase>
-      <Container>
-        <Column align="center" crossAlign="center">
-        <Spacer height="xl" />
-        
-        <TitleText text="📝 懺悔の間" />
-        
-        <Spacer height="lg" />
-        
-        <BoldBodyText text="匿名で黒歴史を投稿する場所" />
-        
-        <Spacer height="lg" />
-        
-        <div style={{ 
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          gap: "80px"
-        }}>
-          <div style={{ flex: 1 }}>
-            <List
-              items={[
-                "🔒 完全匿名投稿",
-                "🎭 自動生成ニックネーム",
-                "📂 カテゴリ分類",
-                "💰 投稿で10ポイント獲得"
-              ]}
-            />
-            
-            <Spacer height="lg" />
-            
-            <div style={{
-              backgroundColor: "#fef2f2",
-              padding: "20px",
-              borderRadius: "10px",
-              border: "2px solid #fca5a5"
-            }}>
-              <BoldBodyText text="「過去を消したい」から「みんなと共有したい」へ" />
-            </div>
-          </div>
+      <Column align="center" crossAlign="center" height="auto">
+      <Spacer height="xl" />
+      
+      <TitleText text="📝 懺悔の間" />
+      
+      <Spacer height="lg" />
+      
+      <BoldBodyText text="匿名で黒歴史を投稿する場所" />
+      
+      <Spacer height="2xl" />
+      
+      <Row gap="80px" width="auto">
+        <Column>
+          <List
+            items={[
+              "🔒 完全匿名投稿",
+              "🎭 自動生成ニックネーム",
+              "📂 カテゴリ分類",
+              "💰 投稿で10ポイント獲得"
+            ]}
+          />
           
-          <div style={{ 
-            flex: 1,
-            textAlign: "center",
-            backgroundColor: "#f3f4f6",
-            padding: "40px",
-            borderRadius: "15px"
-          }}>
-            <div style={{fontSize: "4rem", marginBottom: "20px"}}>📱</div>
-            <div style={{
-              fontSize: "1.2rem",
-              fontStyle: "italic"
-            }}>
-              スマートフォン画面<br />
-              イメージ
-            </div>
-          </div>
-        </div>
+          <Spacer height="lg" />
+          
+          <Container
+            backgroundColor="#fef2f2"
+            padding="10px 20px"
+            cornerRadius={10}
+            border={{width: 2, style: "solid", color: "#fca5a5"}}
+          >
+            <BoldBodyText text="「過去を消したい」から「みんなと共有したい」へ" />
+          </Container>
         </Column>
-      </Container>
+        
+        <Column align="center">
+          <Container
+            backgroundColor="#f3f4f6"
+            padding="40px"
+            cornerRadius={15}
+          >
+            <Column align="center">
+              <CustomText text="📱" size="4rem" />
+              <Spacer height="sm" />
+              <CustomText 
+                text="スマートフォン画面\nイメージ" 
+                size="1.2rem" 
+              />
+            </Column>
+          </Container>
+        </Column>
+      </Row>
+      </Column>
     </SlideBase>
   )
 }

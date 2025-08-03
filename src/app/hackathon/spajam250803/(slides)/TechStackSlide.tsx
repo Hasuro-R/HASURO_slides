@@ -1,93 +1,74 @@
-import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column } from "react-slide-craft"
+import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, Row, FloatContainer, CustomText } from "react-slide-craft"
 
 export function TechStackSlide() {
   return (
     <SlideBase>
-      <Container>
-        <Column align="center" crossAlign="center">
+        <Column align="center" crossAlign="center" height="auto" width="70%">
         <Spacer height="2xl" />
         
         <TitleText text="技術スタック" />
         
         <Spacer height="2xl" />
         
-        <div style={{ 
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "flex-start",
-          gap: "60px"
-        }}>
-          <div style={{ 
-            flex: 1,
-            textAlign: "center"
-          }}>
-            <div style={{
-              backgroundColor: "#fef2f2",
-              borderRadius: "20px",
-              padding: "40px",
-              border: "3px solid #fca5a5"
-            }}>
-              <div style={{fontSize: "4rem", marginBottom: "20px"}}>🖥️</div>
-              <BoldBodyText text="Backend" />
-              <div style={{
-                fontSize: "1.4rem",
-                lineHeight: "1.8",
-                marginTop: "20px"
-              }}>
-                <div>Ruby 3.2.2</div>
-                <div>Rails 7.0.8</div>
-                <div>MySQL 8.0</div>
-                <div>JWT認証</div>
-                <div>Docker</div>
-              </div>
-            </div>
-          </div>
+        <Row gap="60px" width="100%">
+          <Column align="center" height="auto">
+            <Container
+              backgroundColor="#fef2f2"
+              cornerRadius={20}
+              padding="10px 30px"
+              border={{width: 3, style: "solid", color: "#fca5a5"}}
+            >
+              <Column align="center">
+                <CustomText text="🖥️" size="4rem" />
+                <Spacer height="sm" />
+                <BoldBodyText text="Backend" />
+                <Spacer height="sm" />
+                <Column align="center" gap="xs">
+                  <CustomText text="Rails 7.0.8" size="1.4rem" />
+                  <CustomText text="JWT認証" size="1.4rem" />
+                  <CustomText text="Docker" size="1.4rem" />
+                </Column>
+              </Column>
+            </Container>
+          </Column>
           
-          <div style={{ 
-            flex: 1,
-            textAlign: "center"
-          }}>
-            <div style={{
-              backgroundColor: "#eff6ff",
-              borderRadius: "20px",
-              padding: "40px",
-              border: "3px solid #93c5fd"
-            }}>
-              <div style={{fontSize: "4rem", marginBottom: "20px"}}>📱</div>
-              <BoldBodyText text="iOS App" />
-              <div style={{
-                fontSize: "1.4rem",
-                lineHeight: "1.8",
-                marginTop: "20px"
-              }}>
-                <div>Swift 5.8+</div>
-                <div>SwiftUI</div>
-                <div>iOS 17.0+</div>
-                <div>URLSession</div>
-                <div>Combine</div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <Column align="center" height="auto">
+            <Container
+              backgroundColor="#eff6ff"
+              cornerRadius={20}
+              padding="10px 30px"
+              border={{width: 3, style: "solid", color: "#93c5fd"}}
+            >
+              <Column align="center">
+                <CustomText text="📱" size="4rem" />
+                <Spacer height="sm" />
+                <BoldBodyText text="iOS App" />
+                <Spacer height="sm" />
+                <Column align="center" gap="xs">
+                  <CustomText text="Swift 5.8+" size="1.4rem" />
+                  <CustomText text="SwiftUI" size="1.4rem" />
+                  <CustomText text="iOS 17.0+" size="1.4rem" />
+                </Column>
+              </Column>
+            </Container>
+          </Column>
+        </Row>
         
         <Spacer height="xl" />
         
-        <div style={{
-          textAlign: "center",
-          backgroundColor: "#f3f4f6",
-          padding: "30px",
-          borderRadius: "15px"
-        }}>
-          <BoldBodyText text="📡 RESTful API + Native iOS App" />
-          <div style={{
-            fontSize: "1.2rem",
-            marginTop: "10px"
-          }}>
-            シンプルかつ堅牢なアーキテクチャ
-          </div>
-        </div>
+        <Container
+          backgroundColor="#f3f4f6"
+          padding="30px"
+          cornerRadius={15}
+          height="auto"
+        >
+          <Column align="center">
+            <BoldBodyText text="📡 RESTful API + Native iOS App" />
+            <Spacer height="xs" />
+            <CustomText text="シンプルかつ堅牢なアーキテクチャ" size="1.2rem" />
+          </Column>
+        </Container>
         </Column>
-      </Container>
     </SlideBase>
   )
 }

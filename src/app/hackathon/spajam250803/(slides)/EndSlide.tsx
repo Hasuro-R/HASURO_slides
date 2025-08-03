@@ -1,12 +1,12 @@
 import { SlideBase, TitleText, BoldBodyText, Container, Spacer, Column, CustomText, FloatContainer } from "react-slide-craft"
 
-export function DemoSlide() {
+export function EndSlide() {
   return (
     <SlideBase>
         <Column align="center" crossAlign="center" height="auto">
         <Spacer height="2xl" />
         
-        <TitleText text="デモンストレーション" />
+        <CustomText text="END" size="8xl" />
         
         <Spacer height="3xl" />
         </Column>

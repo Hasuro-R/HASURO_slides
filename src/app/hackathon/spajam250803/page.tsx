@@ -1,7 +1,6 @@
 "use client"
 
 import { genSlideObject, SlideCore } from "react-slide-craft"
-import { EndSlide } from "../../components/common/slides/EndSlide"
 import { useColors } from "@/hooks/useColors"
 import { Zen_Maru_Gothic } from "next/font/google"
 
@@ -16,6 +15,7 @@ import { FeaturesSlide4 } from "./(slides)/FeaturesSlide4"
 import { TechStackSlide } from "./(slides)/TechStackSlide"
 import { DemoSlide } from "./(slides)/DemoSlide"
 import { TeamSlide } from "./(slides)/TeamSlide"
+import { EndSlide } from "./(slides)/EndSlide"
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: "500",
@@ -37,7 +37,7 @@ export default function Spajam250803Page() {
     FeaturesSlide4,
     TechStackSlide,
     DemoSlide,
-    genSlideObject(EndSlide, { isBaseStyle: true }),
+    EndSlide,
   ]
 
   return (
